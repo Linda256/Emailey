@@ -7,7 +7,7 @@ const GoogleStrategy = require('passport-google-oauth20').Strategy;
 const app = express();
 
 app.get('/',(req,res)=>{
-	res.send('Good Evening Linda! Have a good day')
+	res.send('Happy Linda! Have a good day')
 });
 
 
