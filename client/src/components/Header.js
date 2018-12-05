@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import {connect} from 'react-redux';
-//import authUser from '../authReducer'
+import { Link } from 'react-router-dom';
+import Payments from './Payments';
 
 class Header extends Component {
   renderContent(){
@@ -10,18 +11,37 @@ class Header extends Component {
       case false:
         return <li><a href="/auth/google">Login With Google</a></li>
       default:
-        return <li><a href="/api/Logout">Logout</a></li>
+        return [
+          <li><Payments /></li>,
+          <li><a href="/api/Logout">Logout</a></li>
+          ]
     }
   }
+
+  // renderContentEmaily(){
+  //   switch(this.props.auth){
+  //     case null:
+  //       return ;
+  //     case false:
+  //       return <li><a href="/">Emaily</a></li>
+  //     default:
+  //       return <li><a href="/surveys">Emaily</a></li>
+  //   }
+  // }
 
   render(){
     //console.log(this.props);
     return(
       <nav>
         <div className="nav-wrapper">
-          <a href="#" className="brand-logo">Emaily</a>
+          <Link
+            to= {this.props.auth ? "/surveys" : "/"}
+            className="brand-logo"
+            >
+            Emaily
+          </Link>
           <ul  className="right hide-on-med-and-down">
-            <li><a >{this.renderContent()}</a></li>
+            <li><a>{this.renderContent()}</a></li>
           </ul>
         </div>
       </nav>
