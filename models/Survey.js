@@ -33,4 +33,4 @@ const surveySchema = new Schema({
   lastResponded:Date
 })
 
-mongoose.module.export('surveys', surveySchema);
+mongoose.model('surveys', surveySchema);
