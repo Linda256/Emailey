@@ -12,7 +12,7 @@ module.exports = app =>{
   // does the user have enough credit for sending email
   const { title, subject, body,recipients } = req.body;
 
-  const survey = new Survery({
+  const survey = new Survey({
     title: title,
     body: body,
     subject: subject,
