@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import {BrowserRouter, Route} from 'react-router-dom';
 import Header from './Header';
 import Landing from './Landing';
+import DashBoard from './Dashboard';
 
 import {connect} from 'react-redux';
 import * as actions from '../actions';
@@ -9,7 +10,7 @@ import * as actions from '../actions';
 
 
 
-const DashBoard = () => <h2>DashBoard</h2>
+
 const SurveyNew = () => <h2>SurveyNew </h2>
 
 
