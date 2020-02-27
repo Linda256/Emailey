@@ -17,6 +17,7 @@ module.exports = app => {
 
   app.get('/api/current_user', (req,res)=>{
     //res.send(req.session);
+    console.log("req.user in authRoutes", req.user)
     res.send(req.user);
   });
 
